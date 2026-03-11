@@ -11,22 +11,44 @@ title: Home
 
 # Tiago
 
-Étudiant en programmation passionné par le développement logiciel, les systèmes et la création de projets techniques.
-
-</div>
-
-</div>
-
+<div class="info-box">
 
 ## À propos
 
-Je suis étudiant en programmation et je développe différents projets pour apprendre et expérimenter de nouvelles technologies.
+Je suis étudiant en programmation passionné par le développement logiciel et la création de projets techniques.
 
-Ce portfolio présente les projets que j'ai réalisés, les technologies que j'utilise et les problèmes techniques que j'ai résolus.
+</div>
+
+</div>
+
+</div>
+
+<div class="info-box">
+
+## À propos
+
+Je suis étudiant en programmation passionné par le développement logiciel et la création de projets techniques.
+
+</div>
 
 
 ## Projets
 
-- [Projet 1](/projects/projet1)
-- [Projet 2](/projects/projet2)
-- [Projet 3](/projects/projet3)
+<div class="projects-grid">
+
+<div class="project-card">
+<h3>Game Engine</h3>
+<p>Moteur 3D en C++.</p>
+</div>
+
+<div class="project-card">
+<h3>Discord Bot</h3>
+<p>Bot modulaire en Python.</p>
+</div>
+
+<div class="project-card">
+<h3>Raytracer</h3>
+<p>Raytracer CPU en C++.</p>
+</div>
+
+</div>
