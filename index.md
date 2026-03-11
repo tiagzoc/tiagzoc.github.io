@@ -5,17 +5,17 @@ title: Home
 
 <div class="hero">
 
-<img src="/assets/images/profile.jpg" alt="photo de profil" class="profile">
+<div class="hero-box">
+
+<img src="/assets/images/profile.jpg" class="profile">
 
 <div class="hero-text">
 
 # Tiago
 
-<div class="info-box">
+Étudiant en programmation passionné par le développement logiciel, les systèmes et la création de projets techniques.
 
-## À propos
-
-Je suis étudiant en programmation passionné par le développement logiciel et la création de projets techniques.
+Je développe des projets pour apprendre de nouvelles technologies et résoudre des problèmes complexes.
 
 </div>
 
@@ -23,14 +23,7 @@ Je suis étudiant en programmation passionné par le développement logiciel et 
 
 </div>
 
-<div class="info-box">
-
-## À propos
-
-Je suis étudiant en programmation passionné par le développement logiciel et la création de projets techniques.
-
-</div>
-
+<section class="projects">
 
 ## Projets
 
@@ -38,17 +31,19 @@ Je suis étudiant en programmation passionné par le développement logiciel et 
 
 <div class="project-card">
 <h3>Game Engine</h3>
-<p>Moteur 3D en C++.</p>
+<p>Moteur 3D en C++</p>
 </div>
 
 <div class="project-card">
 <h3>Discord Bot</h3>
-<p>Bot modulaire en Python.</p>
+<p>Bot Python modulaire</p>
 </div>
 
 <div class="project-card">
 <h3>Raytracer</h3>
-<p>Raytracer CPU en C++.</p>
+<p>Raytracing CPU</p>
 </div>
 
 </div>
+
+</section>
