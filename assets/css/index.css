@@ -84,8 +84,9 @@ body {
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 30px;
 }
 
     .hero-left h1 {
@@ -102,20 +103,30 @@ body {
 
 
 .hero-links {
-    margin-top: auto;
+    margin-top: 20px;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
     .hero-links a {
-        font-size: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        background: rgba(0,0,0,0.6);
         color: #a78bfa;
+        font-size: 24px;
         transition: 0.3s;
+        border: 1px solid rgba(120,80,255,0.4);
     }
 
         .hero-links a:hover {
-            color: #ffffff;
-            transform: scale(1.2);
+            background: #7b5cff;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(120,80,255,0.6);
         }
 
 
@@ -137,6 +148,48 @@ body {
     .profile:hover {
         transform: scale(1.05);
     }
+
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 40px;
+    border: 2px solid #a78bfa;
+    border-radius: 20px;
+}
+
+    .scroll-down::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        background: #a78bfa;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        animation: scrollAnim 1.5s infinite;
+    }
+
+@keyframes scrollAnim {
+
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 15px);
+    }
+}
 
 
 h1 {
