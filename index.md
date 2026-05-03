@@ -92,7 +92,7 @@ title: Home
 </section>
 
 
-<section class="projects">
+<section class="projects" id="projects">
 
 <h2>Projets</h2>
 
