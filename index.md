@@ -102,7 +102,7 @@ title: Home
 
 <h2>Projets</h2>
 
-<div class="projects-grid"></div> <!-- vide pour JS -->
+<div class="projects-grid"></div>
 
 </section>
 

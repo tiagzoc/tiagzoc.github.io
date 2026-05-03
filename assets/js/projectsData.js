@@ -1,7 +1,8 @@
 const projectsData = {
   "AboveTale": {
     languages: ["C#", "Console", "JSON"],
-    apis: [""],
+    apis: ["OpenGL"],
+    libraries: ["GLM"],
     collaborators: ["HVannierM", "Kossouurio"]
   }
 };

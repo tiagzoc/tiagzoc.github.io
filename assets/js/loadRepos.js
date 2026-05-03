@@ -1,12 +1,9 @@
-window.addEventListener("load", async () => {
+window.addEventListener("DOMContentLoaded", async () => {
 
 const grid = document.querySelector(".projects-grid");
 if(!grid) return;
 
-const response = await fetch(
-"https://api.github.com/users/tiagzoc/repos"
-);
-
+const response = await fetch("https://api.github.com/users/tiagzoc/repos");
 const repos = await response.json();
 
 repos.forEach(repo => {
@@ -15,28 +12,34 @@ if(repo.fork) return;
 
 const extra = projectsData[repo.name] || {};
 
+const langs = (extra.languages || []).map(l => 
+`<span class="badge">${l}</span>`).join(" ");
+
+const apisArr = (extra.apis || []);
+const libsArr = (extra.libraries || []);
+
+const apis = apisArr.length
+? apisArr.map(a => `<span class="badge api">${a}</span>`).join(" ")
+: `<span class="badge empty">Aucune API</span>`;
+
+const libs = libsArr.length
+? libsArr.map(l => `<span class="badge lib">${l}</span>`).join(" ")
+: `<span class="badge empty">Aucune librairie</span>`;
+
 const card = document.createElement("div");
 card.className = "project-card";
 
-// badges HTML
-const languages = (extra.languages || []).map(l => 
-`<span class="badge">${l}</span>`).join("");
-
-const apis = (extra.apis || []).map(a => 
-`<span class="badge">${a}</span>`).join("");
-
-const collaborators = (extra.collaborators || []).map(c => 
-`<span class="badge">${c}</span>`).join("");
-
 card.innerHTML = `
-<h3>${repo.name}</h3>
+<div class="project-header">
+    <h3>${repo.name}</h3>
+    <div class="langs">${langs}</div>
+</div>
 
-<p>${repo.description ?? ""}</p>
+<p class="desc">${repo.description ?? ""}</p>
 
-<div class="project-meta">
-${languages}
-${apis}
-${collaborators}
+<div class="meta">
+    <div><strong>API :</strong> ${apis}</div>
+    <div><strong>Librairies :</strong> ${libs}</div>
 </div>
 
 <a class="project-link" href="${repo.html_url}" target="_blank">
