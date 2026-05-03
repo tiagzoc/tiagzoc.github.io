@@ -26,6 +26,23 @@ const libs = libsArr.length
 ? libsArr.map(l => `<span class="badge lib">${l}</span>`).join(" ")
 : `<span class="badge empty">Aucune librairie</span>`;
 
+const collabsArr = extra.collaborators || [];
+
+const collabs = collabsArr.length
+? collabsArr.map(name => {
+
+    const link = contributorsMap[name] || "#";
+
+   return `
+    <a href="${link}" target="_blank" class="badge contributor">
+        <img src="https://github.com/${name}.png" />
+        ${name}
+    </a>
+    `;  
+
+}).join("")
+: `<span class="badge empty">Aucun</span>`;
+
 const card = document.createElement("div");
 card.className = "project-card";
 
@@ -53,6 +70,7 @@ card.innerHTML = `
         <div class="meta">
             <div><strong>API :</strong> ${apis}</div>
             <div><strong>Librairies :</strong> ${libs}</div>
+            <div><strong>Contributeurs :</strong> ${collabs}</div>
         </div>
 
         <p class="desc">${repo.description ?? ""}</p>
