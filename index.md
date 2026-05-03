@@ -36,11 +36,21 @@ title: Home
 
         </div>
 
+        <div class="scroll-down"></div>
+
     </div>
 
-    <div class="scroll-down"></div>
-
 </div>
+
+<section class="contact" id="contact">
+
+    <h2>Me contacter</h2>
+
+    <p>Email : <a href="mailto:tonmail@gmail.com">tonmail@gmail.com</a></p>
+
+    <p>LinkedIn : <a href="https://linkedin.com/in/tonprofil" target="_blank">Mon profil</a></p>
+
+</section>
 
 
 <section class="tech">
