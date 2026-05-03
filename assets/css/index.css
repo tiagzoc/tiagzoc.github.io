@@ -494,6 +494,13 @@ h2 {
         transition: 0.2s;
     }
 
+    .badge.solo {
+        background: rgba(140,100,255,0.15);
+        border: 1px solid rgba(140,100,255,0.5);
+        color: #a78bfa;
+        font-weight: bold;
+    }
+
         .badge.contributor:hover {
             background: #7b5cff;
             color: white;
@@ -506,6 +513,7 @@ h2 {
             border-radius: 50%;
             margin-right: 5px;
         }
+
 
 .meta {
     margin-top: 20px;

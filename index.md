@@ -22,7 +22,7 @@ title: Home
                     <i class="devicon-github-original"></i>
                 </a>
 
-                <a href="https://linkedin.com/in/TON-LINK" target="_blank">
+                <a href="https://linkedin.com/in/tiago-zocca" target="_blank">
                     <i class="devicon-linkedin-plain"></i>
                 </a>
 

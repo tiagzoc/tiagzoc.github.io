@@ -28,20 +28,27 @@ const libs = libsArr.length
 
 const collabsArr = extra.collaborators || [];
 
-const collabs = collabsArr.length
-? collabsArr.map(name => {
+let collabs = "";
 
-    const link = contributorsMap[name] || "#";
+if (collabsArr.length === 0) {
 
-   return `
-    <a href="${link}" target="_blank" class="badge contributor">
-        <img src="https://github.com/${name}.png" />
-        ${name}
-    </a>
-    `;  
+    collabs = `<span class="badge solo">Solo Project</span>`;
 
-}).join("")
-: `<span class="badge empty">Aucun</span>`;
+} else {
+
+    collabs = collabsArr.map(name => {
+
+        const link = contributorsMap[name] || "#";
+
+        return `
+        <a href="${link}" target="_blank" class="badge contributor">
+            ${name}
+        </a>
+        `;
+
+    }).join("");
+
+}
 
 const card = document.createElement("div");
 card.className = "project-card";
