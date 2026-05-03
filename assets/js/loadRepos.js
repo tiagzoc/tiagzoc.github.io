@@ -3,12 +3,22 @@ window.addEventListener("DOMContentLoaded", async () => {
 const grid = document.querySelector(".projects-grid");
 if(!grid) return;
 
-const response = await fetch("https://api.github.com/users/tiagzoc/repos");
+const response = await fetch(
+"https://api.github.com/users/tiagzoc/repos",
+{
+headers: {
+"Accept": "application/vnd.github.mercy-preview+json"
+}
+}
+);
+
 const repos = await response.json();
 
 repos.forEach(repo => {
 
 if(repo.fork) return;
+
+if(!repo.topics || !repo.topics.includes("portfolio")) return;
 
 const extra = projectsData[repo.name] || {};
 
