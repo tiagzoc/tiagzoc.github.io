@@ -7,22 +7,38 @@ title: Home
 
     <div class="hero-box">
 
-        <img src="/assets/images/profile.jpg" class="profile">
+        <div class="hero-left">
 
-        <div class="hero-text">
+            <h1>Zocca Tiago</h1>
 
-        <h1>Tiago</h1>
+            <p>
+            Étudiant en programmation passionné par le développement logiciel,
+            les systèmes et la création de projets techniques.
+            </p>
 
-        <p>
-        Étudiant en programmation passionné par le développement logiciel,
-        les systèmes et la création de projets techniques.
-        </p>
+            <div class="hero-links">
+
+                <a href="https://github.com/tiagzoc" target="_blank">
+                    <i class="devicon-github-original"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/TON-LINK" target="_blank">
+                    <i class="devicon-linkedin-plain"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <img src="/assets/images/profile.jpg" class="profile">
 
         </div>
 
     </div>
 
-</div> <!-- ✅ fermeture hero -->
+</div>
 
 
 <section class="tech">
