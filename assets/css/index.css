@@ -11,6 +11,10 @@ html {
     scroll-behavior: smooth;
 }
 
+section {
+    scroll-margin-top: 100px;
+}
+
 #particles {
     position: fixed;
     width: 100%;
@@ -32,18 +36,31 @@ html {
     background: rgba(0,0,0,0.4);
     backdrop-filter: blur(10px);
     z-index: 1000;
+    box-sizing: border-box;
+    transition: 0.3s;
 }
+
+    .header.scrolled {
+        background: rgba(0,0,0,0.8);
+    }
 
     .header a {
         color: white;
         text-decoration: none;
-        margin-left: 20px;
         transition: 0.3s;
+        white-space: nowrap;
     }
 
         .header a:hover {
             color: #a78bfa;
         }
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
 
 .logo {
     font-weight: bold;
