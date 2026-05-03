@@ -29,22 +29,41 @@ const libs = libsArr.length
 const card = document.createElement("div");
 card.className = "project-card";
 
+const media = extra.media || "";
+
+const mediaHTML = media.endsWith(".mp4")
+? `<video src="${media}" autoplay muted loop></video>`
+: `<img src="${media}" alt="${repo.name}">`;
+
 card.innerHTML = `
-<div class="project-header">
-    <h3>${repo.name}</h3>
-    <div class="langs">${langs}</div>
+
+<div class="project-layout">
+
+    <div class="project-media">
+        ${mediaHTML}
+    </div>
+
+    <div class="project-content">
+
+        <div class="project-header">
+            <h3>${repo.name}</h3>
+            <div class="langs">${langs}</div>
+        </div>
+
+        <div class="meta">
+            <div><strong>API :</strong> ${apis}</div>
+            <div><strong>Librairies :</strong> ${libs}</div>
+        </div>
+
+        <p class="desc">${repo.description ?? ""}</p>
+
+        <a class="project-button" href="${repo.html_url}" target="_blank">
+            Voir le repo
+        </a>
+
+    </div>
+
 </div>
-
-<p class="desc">${repo.description ?? ""}</p>
-
-<div class="meta">
-    <div><strong>API :</strong> ${apis}</div>
-    <div><strong>Librairies :</strong> ${libs}</div>
-</div>
-
-<a class="project-link" href="${repo.html_url}" target="_blank">
-Voir repo →
-</a>
 `;
 
 grid.appendChild(card);
