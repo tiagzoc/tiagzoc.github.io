@@ -5,21 +5,53 @@ title: Home
 
 <div class="hero">
 
-<div class="hero-box">
+    <div class="hero-box">
 
-<img src="/assets/images/profile.jpg" class="profile">
+        <img src="/assets/images/profile.jpg" class="profile">
 
-<div class="hero-text">
+        <div class="hero-text">
 
-# Tiago
+        # Tiago
 
-Étudiant en programmation passionné par le développement logiciel, les systèmes et la création de projets techniques.
+        Étudiant en programmation passionné par le développement logiciel, les systèmes et la création de projets techniques.
 
-Je développe des projets pour apprendre de nouvelles technologies et résoudre des problèmes complexes.
+        Je développe des projets pour apprendre de nouvelles technologies et résoudre des problèmes complexes.
 
-</div>
+        </div>
 
-</div>
+    </div>
+
+<div class="tech-grid">
+
+    <div class="tech-item">
+        <i class="devicon-c-plain"></i>
+        <p>C</p>
+    </div>
+
+    <div class="tech-item">
+        <i class="devicon-cplusplus-plain"></i>
+        <p>C++</p>
+    </div>
+
+    <div class="tech-item">
+        <i class="devicon-csharp-plain"></i>
+        <p>C#</p>
+    </div>
+
+    <div class="tech-item">
+        <i class="devicon-cmake-plain"></i>
+        <p>CMake</p>
+    </div>
+
+    <div class="tech-item">
+        <i class="devicon-github-original"></i>
+        <p>GitHub</p>
+    </div>
+
+    <div class="tech-item">
+        <i class="devicon-python-plain"></i>
+        <p>Python</p>
+    </div>
 
 </div>
 
