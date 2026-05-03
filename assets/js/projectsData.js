@@ -13,8 +13,8 @@ const contributorsMap = {
 const projectsData = {
   "AboveTale":
    {
-    languages: ["C#", "Console", "JSON"],
-    apis: [],
+    languages: ["C#", "JSON"],
+    apis: ["Console"],
     libraries: ["Newtonsoft"],
     collaborators: ["HVannierM", "Kossouurio"],
     media: "/assets/images/game-engine.png"
@@ -22,8 +22,8 @@ const projectsData = {
 
   "AssetEngine":
    {
-    languages: ["C++", "Console"],
-    apis: [],
+    languages: ["C++"],
+    apis: ["Console"],
     libraries: ["Standard C++ library"],
     collaborators: ["MithanielVillard"],
     media: "/assets/images/game-engine.png"
@@ -40,8 +40,8 @@ const projectsData = {
 
     "DonutMath":
    {
-    languages: ["C++", "Console"],
-    apis: [],
+    languages: ["C++"],
+    apis: ["Console"],
     libraries: [],
     collaborators: [],
     media: "/assets/images/game-engine.png"

@@ -85,8 +85,8 @@ card.innerHTML = `
         </div>
 
         <div class="meta">
-            <div><strong>API :</strong> ${apis}</div>
-            <div><strong>Librairies :</strong> ${libs}</div>
+            <div><strong>Render API :</strong> ${apis}</div>
+            <div><strong>Additionals Librairies :</strong> ${libs}</div>
             <div><strong>Contributeurs :</strong> ${collabs}</div>
         </div>
 
