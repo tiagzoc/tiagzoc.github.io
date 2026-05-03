@@ -42,18 +42,9 @@ title: Home
 
 </div>
 
-<section class="contact" id="contact">
-
-    <h2>Me contacter</h2>
-
-    <p>Email : <a href="mailto:tonmail@gmail.com">tonmail@gmail.com</a></p>
-
-    <p>LinkedIn : <a href="https://linkedin.com/in/tonprofil" target="_blank">Mon profil</a></p>
-
-</section>
-
 
 <section class="tech">
+<h2>Mes compétences</h2>
 
 <div class="tech-grid">
 
@@ -87,6 +78,21 @@ title: Home
         <p>Python</p>
     </div>
 
+    <div class="tech-item">
+        <i class="devicon-opengl-plain"></i>
+        <p>OpenGL</p>
+    </div>
+
+    <div class="tech-item">
+        <span class="api-icon">V</span>
+        <p>Vulkan</p>
+    </div>
+
+    <div class="tech-item">
+        <span class="api-icon">DX12</span>
+        <p>DirectX12</p>
+    </div>
+
 </div>
 
 </section>
@@ -97,5 +103,16 @@ title: Home
 <h2>Projets</h2>
 
 <div class="projects-grid"></div> <!-- vide pour JS -->
+
+</section>
+
+
+<section class="contact" id="contact">
+
+    <h2>Mes projets vous intéressent ou vous voulez discuter ? Vous pouvez me contacter par : </h2>
+
+    <p>Email : <a href="mailto:zocca.tiago@gmail.com">zocca.tiago@gmail.com</a></p>
+
+    <p>LinkedIn : <a href="https://www.linkedin.com/in/tiago-zocca" target="_blank">Mon profil</a></p>
 
 </section>

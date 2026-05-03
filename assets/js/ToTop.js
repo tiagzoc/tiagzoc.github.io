@@ -1,4 +1,8 @@
+window.addEventListener("DOMContentLoaded", () => {
+
 const btn = document.getElementById("scrollTopBtn");
+
+if(!btn) return;
 
 btn.addEventListener("click", () => {
     window.scrollTo({
@@ -7,14 +11,4 @@ btn.addEventListener("click", () => {
     });
 });
 
-window.addEventListener("scroll", () => {
-    const btn = document.getElementById("scrollTopBtn");
-
-    if (window.scrollY > 300) {
-        btn.style.opacity = "1";
-        btn.style.pointerEvents = "auto";
-    } else {
-        btn.style.opacity = "0";
-        btn.style.pointerEvents = "none";
-    }
 });
