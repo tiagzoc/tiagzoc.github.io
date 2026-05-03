@@ -1,7 +1,12 @@
 async function loadRepos(){
 
 const response = await fetch(
-"https://api.github.com/users/tiagzoc/repos"
+"https://api.github.com/users/tiagzoc/repos",
+{
+headers: {
+"Accept": "application/vnd.github.mercy-preview+json"
+}
+}
 );
 
 const repos = await response.json();
@@ -13,7 +18,7 @@ repos.forEach(repo => {
 if(repo.fork) return;
 
 // filtre portfolio (optionnel)
-if(!repo.topics || !repo.topics.includes("portfolio")) return;
+//if(!repo.topics || !repo.topics.includes("portfolio")) return;
 
 const card = document.createElement("div");
 

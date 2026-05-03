@@ -11,15 +11,21 @@ title: Home
 
         <div class="hero-text">
 
-        # Tiago
+        <h1>Tiago</h1>
 
-        Étudiant en programmation passionné par le développement logiciel, les systèmes et la création de projets techniques.
-
-        Je développe des projets pour apprendre de nouvelles technologies et résoudre des problèmes complexes.
+        <p>
+        Étudiant en programmation passionné par le développement logiciel,
+        les systèmes et la création de projets techniques.
+        </p>
 
         </div>
 
     </div>
+
+</div> <!-- ✅ fermeture hero -->
+
+
+<section class="tech">
 
 <div class="tech-grid">
 
@@ -55,27 +61,13 @@ title: Home
 
 </div>
 
+</section>
+
+
 <section class="projects">
 
-## Projets
+<h2>Projets</h2>
 
-<div class="projects-grid">
-
-<div class="project-card">
-<h3>Game Engine</h3>
-<p>Moteur 3D en C++</p>
-</div>
-
-<div class="project-card">
-<h3>Discord Bot</h3>
-<p>Bot Python modulaire</p>
-</div>
-
-<div class="project-card">
-<h3>Raytracer</h3>
-<p>Raytracing CPU</p>
-</div>
-
-</div>
+<div class="projects-grid"></div> <!-- vide pour JS -->
 
 </section>
