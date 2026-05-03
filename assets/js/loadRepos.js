@@ -1,4 +1,11 @@
-async function loadRepos(){
+window.addEventListener("load", async () => {
+
+const grid = document.querySelector(".projects-grid");
+
+if(!grid){
+    console.error("projects-grid not found");
+    return;
+}
 
 const response = await fetch(
 "https://api.github.com/users/tiagzoc/repos",
@@ -11,14 +18,9 @@ headers: {
 
 const repos = await response.json();
 
-const grid = document.querySelector(".projects-grid");
-
 repos.forEach(repo => {
 
 if(repo.fork) return;
-
-// filtre portfolio (optionnel)
-//if(!repo.topics || !repo.topics.includes("portfolio")) return;
 
 const card = document.createElement("div");
 
@@ -34,6 +36,4 @@ grid.appendChild(card);
 
 });
 
-}
-
-loadRepos();
+});
