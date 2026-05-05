@@ -13,6 +13,7 @@ const contributorsMap = {
 const projectsData = {
   "AboveTale":
    {
+    priority: 3,
     languages: ["C#", "JSON"],
     apis: ["Console"],
     libraries: ["Newtonsoft"],
@@ -22,6 +23,7 @@ const projectsData = {
 
   "AssetEngine":
    {
+    priority: 2,
     languages: ["C++"],
     apis: ["Console"],
     libraries: ["Standard C++ library"],
@@ -31,6 +33,7 @@ const projectsData = {
 
     "AudioEngine":
    {
+    priority: 1,
     languages: ["C++"],
     apis: ["SFML"],
     libraries: ["XAudio2"],
@@ -40,6 +43,7 @@ const projectsData = {
 
     "DonutMath":
    {
+    priority: 3,
     languages: ["C++"],
     apis: ["Console"],
     libraries: [],
@@ -58,6 +62,7 @@ const projectsData = {
 
     "MultiPlayer":
    {
+    priority: 1,
     languages: ["C++"],
     apis: ["SFML"],
     libraries: ["Winsock2"],
@@ -67,6 +72,7 @@ const projectsData = {
 
     "MultiThreading":
    {
+    priority: 2,
     languages: ["C++"],
     apis: ["SFML"],
     libraries: ["Windows native library"],
@@ -76,6 +82,7 @@ const projectsData = {
 
     "PIT_Engine":
    {
+    priority: 0,
     languages: ["C++"],
     apis: ["DirectX12"],
     libraries: [],
@@ -85,6 +92,7 @@ const projectsData = {
 
     "Shoot-Em-Up":
    {
+    priority: 3,
     languages: ["C++"],
     apis: ["SFML"],
     libraries: [],

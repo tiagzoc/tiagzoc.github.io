@@ -517,6 +517,11 @@ h2 {
         background: rgba(80,200,255,0.3);
     }
 
+    .badge.featured {
+        background: linear-gradient(45deg, gold, orange);
+        color: black;
+        font-weight: bold;
+    }
 
     .badge.solo {
         background: rgba(140,100,255,0.25);

@@ -14,6 +14,19 @@ headers: {
 
 const repos = await response.json();
 
+repos.sort((a, b) => {
+
+    const aData = projectsData[a.name] || {};
+    const bData = projectsData[b.name] || {};
+
+    const aPriority = aData.priority ?? 999;
+    const bPriority = bData.priority ?? 999;
+
+    return aPriority - bPriority;
+
+});
+
+
 repos.forEach(repo => {
 
 if(repo.fork) return;
@@ -99,6 +112,12 @@ if (media.includes("youtube.com") || media.includes("youtu.be")) {
 
 }
 
+const isFeatured = extra.priority === 0;
+
+const featuredBadge = isFeatured
+? `<span class="badge featured">⭐ Featured</span>`
+: "";
+
 card.innerHTML = `
 
 <div class="project-layout">
@@ -109,8 +128,9 @@ card.innerHTML = `
 
     <div class="project-content">
 
-        <div class="project-header">
+       <div class="project-header">
             <h3>${repo.name}</h3>
+            ${featuredBadge}
             <div class="langs">${langs}</div>
         </div>
 
