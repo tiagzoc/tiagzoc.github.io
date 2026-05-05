@@ -355,8 +355,8 @@ h2 {
 }
 
 .top-projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 40px;
 }
 
