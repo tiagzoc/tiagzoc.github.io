@@ -171,8 +171,6 @@ document.addEventListener("click", function(e){
 
     const iframe = document.createElement("iframe");
 
-    const iframe = document.createElement("iframe");
-
     iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
     iframe.frameBorder = "0";
     iframe.allowFullscreen = true;
