@@ -1,9 +1,10 @@
 window.addEventListener("DOMContentLoaded", async () => {
 
-    const grid = document.querySelector(".projects-grid");
-    if (!grid) return;
+    const normalGrid = document.querySelector(".projects-grid");
+    const topGrid = document.querySelector(".top-projects-grid");
 
-    // ---------------- FETCH REPOS ----------------
+    if (!normalGrid || !topGrid) return;
+        // ---------------- FETCH REPOS ----------------
 
     const response = await fetch(
         "https://api.github.com/users/tiagzoc/repos",
@@ -152,7 +153,11 @@ window.addEventListener("DOMContentLoaded", async () => {
             </div>
         `;
 
-        grid.appendChild(card);
+        if (isFeatured) {
+            topGrid.appendChild(card);
+        } else {
+            normalGrid.appendChild(card);
+        }
     });
 
 });
