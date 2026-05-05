@@ -115,7 +115,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         const isFeatured = extra.priority === 0;
 
         const featuredBadge = isFeatured
-            ? `<span class="badge featured">⭐ Top Project</span>`
+            ? `<span class="badge featured">Featured</span>`
             : "";
 
         const card = document.createElement("div");
