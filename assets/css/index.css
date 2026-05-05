@@ -348,6 +348,37 @@ h2 {
     }
 
 
+.top-projects {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 40px;
+}
+
+.top-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+@media (max-width:900px) {
+    .top-projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card.featured {
+    border: 2px solid transparent;
+    background: linear-gradient(#0b051c, #0b051c) padding-box, linear-gradient(45deg, gold, #8f6bff) border-box;
+    box-shadow: 0 0 30px rgba(140,100,255,0.4);
+    transform: scale(1.02);
+}
+
+
+    .project-card.featured:hover {
+        transform: scale(1.04);
+        box-shadow: 0 0 40px rgba(255,215,0,0.4);
+    }
+
 
 .projects {
     max-width: 1100px;

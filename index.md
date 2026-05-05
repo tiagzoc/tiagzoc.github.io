@@ -97,12 +97,20 @@ title: Home
 
 </section>
 
+<section class="top-projects" id="top-projects">
+
+    <h2>Projets principaux</h2>
+
+    <div class="top-projects-grid"></div>
+
+</section>
+
 
 <section class="projects" id="projects">
 
-<h2>Projets</h2>
+    <h2>Projets</h2>
 
-<div class="projects-grid"></div>
+    <div class="projects-grid"></div>
 
 </section>
 
