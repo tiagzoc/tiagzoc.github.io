@@ -18,7 +18,7 @@ const projectsData = {
     apis: ["Console"],
     libraries: ["Newtonsoft"],
     collaborators: ["HVannierM", "Kossouurio"],
-    media: "/assets/images/game-engine.png"
+    media: "https://youtu.be/v1xrme9aABE"
   },
 
   "AssetEngine":
@@ -28,7 +28,7 @@ const projectsData = {
     apis: ["Console"],
     libraries: ["Standard C++ library"],
     collaborators: ["MithanielVillard"],
-    media: "/assets/images/game-engine.png"
+    media: "https://youtu.be/CXbhCiENGxI"
   },
 
     "AudioEngine":
@@ -38,7 +38,7 @@ const projectsData = {
     apis: ["SFML"],
     libraries: ["XAudio2"],
     collaborators: ["REAPERtmm"],
-    media: "/assets/images/game-engine.png"
+    media: "https://youtu.be/9nmzFfxKcgQ"
   },
 
     "DonutMath":
@@ -57,7 +57,7 @@ const projectsData = {
     apis: ["OpenGL", "glad"],
     libraries: ["GLM"],
     collaborators: ["Paul-Henri-Solat-Gtech"],
-    media: "/assets/images/game-engine.png"
+    media: "https://youtu.be/TvXhwMJM9jM"
   },
 
     "MultiPlayer":
@@ -77,7 +77,7 @@ const projectsData = {
     apis: ["SFML"],
     libraries: ["Windows native library"],
     collaborators: ["Kikii95", "Skaro971"],
-    media: "/assets/images/game-engine.png"
+    media: "https://youtu.be/1y19j3n5B9k"
   },
 
     "PIT_Engine":
@@ -87,7 +87,7 @@ const projectsData = {
     apis: ["DirectX12"],
     libraries: [],
     collaborators: ["REAPERtmm", "Skaro971"],
-    media: "/assets/images/game-engine.png"
+    media: "https://youtu.be/No6pGJ1y_k8"
   },
 
     "Shoot-Em-Up":
