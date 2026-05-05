@@ -402,9 +402,14 @@ h2 {
         flex-direction: column;
     }
 
-    .project-media img,
-    .project-media video {
-        max-width: 100%;
+    .project-media iframe,
+    .project-media img {
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+        border-radius: 12px;
+        border: 1px solid rgba(120,80,255,0.4);
+        object-fit: cover;
     }
 }
 
@@ -466,19 +471,12 @@ h2 {
 }
 
 .badge {
-    padding: 8px 12px;
+    padding: 6px 12px;
     border-radius: 10px;
-    background: rgba(120,80,255,0.2);
-    border: 1px solid rgba(120,80,255,0.4);
     font-size: 13px;
+    font-weight: bold;
+    color: white;
 }
-    .badge.api {
-        background: rgba(120,80,255,0.25);
-    }
-
-    .badge.lib {
-        background: rgba(80,200,255,0.15);
-    }
 
     .badge.empty {
         background: rgba(255,255,255,0.08);
@@ -486,19 +484,53 @@ h2 {
     }
 
 
+    .badge.lang-C {
+        background: #555;
+    }
+
+    .badge.lang-Cpp {
+        background: #00599C;
+    }
+
+    .badge.lang-Csharp {
+        background: #68217A;
+    }
+
+    .badge.lang-Python {
+        background: #3776AB;
+    }
+
+    .badge.lang-JSON {
+        background: #f1c40f;
+        color: black;
+    }
+
+    .badge.lang-CMake {
+        background: #064F8C;
+    }
+
+    .badge.api {
+        background: linear-gradient(45deg, #6d4aff, #8f6bff);
+    }
+
+    .badge.lib {
+        background: rgba(80,200,255,0.3);
+    }
+
+
+    .badge.solo {
+        background: rgba(140,100,255,0.25);
+        border: 1px solid rgba(140,100,255,0.5);
+        color: #a78bfa;
+        font-weight: bold;
+    }
+
     .badge.contributor {
-        background: rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.1);
         border: 1px solid rgba(255,255,255,0.2);
         color: #c6b6ff;
         text-decoration: none;
         transition: 0.2s;
-    }
-
-    .badge.solo {
-        background: rgba(140,100,255,0.15);
-        border: 1px solid rgba(140,100,255,0.5);
-        color: #a78bfa;
-        font-weight: bold;
     }
 
         .badge.contributor:hover {

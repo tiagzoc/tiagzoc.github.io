@@ -22,8 +22,15 @@ if(!repo.topics || !repo.topics.includes("portfolio")) return;
 
 const extra = projectsData[repo.name] || {};
 
+function formatLangClass(lang){
+    return lang
+        .replace("++","pp")
+        .replace("#","sharp");
+}
+
 const langs = (extra.languages || []).map(l => 
-`<span class="badge">${l}</span>`).join(" ");
+`<span class="badge lang-${formatLangClass(l)}">${l}</span>`
+).join(" ");
 
 const apisArr = (extra.apis || []);
 const libsArr = (extra.libraries || []);
@@ -65,9 +72,32 @@ card.className = "project-card";
 
 const media = extra.media || "";
 
-const mediaHTML = media.endsWith(".mp4")
-? `<video src="${media}" autoplay muted loop></video>`
-: `<img src="${media}" alt="${repo.name}">`;
+function getYouTubeEmbed(url) {
+    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/);
+    return match ? `https://www.youtube.com/embed/${match[1]}` : null;
+}
+
+let mediaHTML = "";
+
+if (media.includes("youtube.com") || media.includes("youtu.be")) {
+
+    const embed = getYouTubeEmbed(media);
+
+    mediaHTML = `
+    <iframe 
+        src="${embed}" 
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+    `;
+
+} else {
+
+    mediaHTML = `
+    <img src="${media}" alt="${repo.name}">
+    `;
+
+}
 
 card.innerHTML = `
 
