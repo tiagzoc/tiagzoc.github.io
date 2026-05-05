@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     const grid = document.querySelector(".projects-grid");
     if (!grid) return;
 
+    // ---------------- FETCH REPOS ----------------
 
     const response = await fetch(
         "https://api.github.com/users/tiagzoc/repos",
@@ -65,18 +66,27 @@ window.addEventListener("DOMContentLoaded", async () => {
         }).join("");
     }
 
+    function getYouTubeId(url) {
+        const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/);
+        return match ? match[1] : null;
+    }
+
     function buildMedia(media, repoName) {
+
         if (!media) return "";
 
+
         if (media.includes("youtube.com") || media.includes("youtu.be")) {
-            const embed = getYouTubeEmbed(media);
+
+            const videoId = getYouTubeId(media);
+
+            const thumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
             return `
-                <iframe 
-                    src="${embed}" 
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
+                <div class="youtube-lazy" data-id="${videoId}">
+                    <img src="${thumbnail}" alt="${repoName}">
+                    <div class="play-button">▶</div>
+                </div>
             `;
         }
 
@@ -144,5 +154,23 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         grid.appendChild(card);
     });
+
+});
+
+document.addEventListener("click", function(e){
+
+    const container = e.target.closest(".youtube-lazy");
+    if(!container) return;
+
+    const videoId = container.dataset.id;
+
+    const iframe = document.createElement("iframe");
+
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    iframe.frameBorder = "0";
+    iframe.allowFullscreen = true;
+
+    container.innerHTML = "";
+    container.appendChild(iframe);
 
 });
