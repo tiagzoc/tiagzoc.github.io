@@ -644,7 +644,9 @@ h2 {
 
 
 .project-button {
-    display: inline-block;
+    display: inline-flex;
+    align-self: flex-start;
+    width: fit-content;
     margin-top: 20px;
     padding: 12px 20px;
     border-radius: 10px;
