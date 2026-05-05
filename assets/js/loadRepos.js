@@ -106,8 +106,8 @@ window.addEventListener("DOMContentLoaded", async () => {
             .map(l => `<span class="badge lang-${formatLangClass(l)}">${l}</span>`)
             .join(" ");
 
-const apis = buildBadges(extra.apis, "api", "No API");
-const libs = buildBadges(extra.libraries, "lib", "No libraries");
+        const apis = buildBadges(extra.apis, "api", "No API");
+        const libs = buildBadges(extra.libraries, "lib", "No libraries");
         const collabs = buildCollaborators(extra.collaborators);
 
         const mediaHTML = buildMedia(extra.media, repo.name);
@@ -171,9 +171,15 @@ document.addEventListener("click", function(e){
 
     const iframe = document.createElement("iframe");
 
+    const iframe = document.createElement("iframe");
+
     iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
     iframe.frameBorder = "0";
     iframe.allowFullscreen = true;
+
+    iframe.width = "100%";
+    iframe.height = "100%";
+    iframe.style.border = "0";
 
     container.innerHTML = "";
     container.appendChild(iframe);
