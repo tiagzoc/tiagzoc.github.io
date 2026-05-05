@@ -106,8 +106,8 @@ window.addEventListener("DOMContentLoaded", async () => {
             .map(l => `<span class="badge lang-${formatLangClass(l)}">${l}</span>`)
             .join(" ");
 
-        const apis = buildBadges(extra.apis, "api", "Aucune API");
-        const libs = buildBadges(extra.libraries, "lib", "Aucune librairie");
+const apis = buildBadges(extra.apis, "api", "No API");
+const libs = buildBadges(extra.libraries, "lib", "No libraries");
         const collabs = buildCollaborators(extra.collaborators);
 
         const mediaHTML = buildMedia(extra.media, repo.name);
@@ -122,35 +122,35 @@ window.addEventListener("DOMContentLoaded", async () => {
         card.className = `project-card ${isFeatured ? "featured" : ""}`;
 
         card.innerHTML = `
-            <div class="project-layout">
+        <div class="project-layout">
 
-                <div class="project-media">
-                    ${mediaHTML}
+            <div class="project-media">
+                ${mediaHTML}
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-header">
+                    <h3>${repo.name}</h3>
+                    ${featuredBadge}
+                    <div class="langs">${langs}</div>
                 </div>
 
-                <div class="project-content">
-
-                    <div class="project-header">
-                        <h3>${repo.name}</h3>
-                        ${featuredBadge}
-                        <div class="langs">${langs}</div>
-                    </div>
-
-                    <div class="meta">
-                        <div><strong>Render API :</strong> ${apis}</div>
-                        <div><strong>Additional Libraries :</strong> ${libs}</div>
-                        <div><strong>Contributeurs :</strong> ${collabs}</div>
-                    </div>
-
-                    <p class="desc">${repo.description ?? ""}</p>
-
-                    <a class="project-button" href="${repo.html_url}" target="_blank">
-                        Voir le repo
-                    </a>
-
+                <div class="meta">
+                    <div><strong>Rendering API:</strong> ${apis}</div>
+                    <div><strong>Libraries:</strong> ${libs}</div>
+                    <div><strong>Contributors:</strong> ${collabs}</div>
                 </div>
+
+                <p class="desc">${repo.description ?? ""}</p>
+
+                <a class="project-button" href="${repo.html_url}" target="_blank">
+                    View repository
+                </a>
 
             </div>
+
+        </div>
         `;
 
         if (isFeatured) {
