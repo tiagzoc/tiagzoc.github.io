@@ -348,17 +348,6 @@ h2 {
     }
 
 
-.top-projects {
-    max-width: 1200px;
-    margin: auto;
-    padding: 100px 40px;
-}
-
-.top-projects-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
 
 @media (max-width:900px) {
     .top-projects-grid {
@@ -380,12 +369,14 @@ h2 {
     }
 
 
-.projects {
+.projects,
+.top-projects {
     max-width: 1400px;
     margin: auto;
     padding: 100px 40px;
 }
 
+.top-projects-grid,
 .projects-grid {
     display: flex;
     flex-direction: column;
